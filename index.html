@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Under Construction</title>
+    <style>
+      .button-click {
+        padding: 20px;
+        padding-left: 5px;
+        background-color: rgb(255,25,20);
+        border-radius: 50px;
+       	position: relative;
+        left: 190px;
+        cursor: pointer;
+      }
+      .top-section {
+        text-align: center;
+        font-family: sans-serif;
+      }
+      
+      .the-box {
+        background-color: rgb(0,0,0);
+        margin-top: 10px;
+        margin-left: 250px;
+        width: 250px;
+        height: 250px;
+      }
+  </style>
+</head>
+<body>
+<div class="top-section">
+  
+  
+  <h1>Under Contruction</h1>
+  <p>Ya came to early and thou must wait! In the meantime, click this button below. </p>
+  </div>
+  <button class="button-click"> Press</button>
+  
+  <div class="the-box">  </div>
+   
+ <script>
+  var Button = document.querySelector(".button-click");
+   var DaBox = document.querySelector(".the-box");
+   
+   
+   function onClick() {
+     var r = Math.random() * 255;
+   var b = Math.random() * 255;
+   var g = Math.random() * 255;
+   
+     DaBox.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+     var StateColourName = document.createElement("p");
+     StateColourName.textContent = "The color is rgb(" + r + ", " + g + ", " + b + ")";
+     
+     document.body.appendChild(StateColourName);
+     
+   }
+   
+   Button.addEventListener("click", onClick);
+   
+
+  </script>
+
+   
+</body>
+</html>
